@@ -8,6 +8,7 @@ void main() {
 
   // Declaring random vars
   var name = "TestUser";
+  final secret = "ABCD87612365";
   var isStored = true;
   String empty_str = "";
 
@@ -85,4 +86,7 @@ void main() {
   print(nums.length);
   print(nums.reversed);
   print(nums.first);
+
+  // Try changing a 'final' type of variable.
+  // secret = "NewValue";
 }
