@@ -3,22 +3,22 @@ sum(a, b) {
 }
 
 void main() {
-  print("First program");
+  // print("First program");
   print(sum(10, 20));
 
   // Declaring random vars
   var name = "TestUser";
   var isStored = true;
-  var empty_str = "";
+  String empty_str = "";
+
   var num = 100;
-  var pi = 3.141;
+  var pi = 0.5;
   var sentence = "This is new";
-  var nums = [1, 2, 3, 5];
   var mix_list = [1, "abc", 3.45, true];
   var a_null = null;
 
   // Trying printing them all. This is one way to do it.
-  print("$name, $pi, $sentence, $num, $nums, $mix_list");
+  print("$name, $pi, $sentence, $num, $mix_list");
 
   // String operations ...a few common ones
   print("Strings:: methods and operations");
@@ -29,7 +29,15 @@ void main() {
   print(name.isEmpty);
   print(empty_str.isEmpty);
   print(name[0]);
+  print(name.split(""));
   print(name[name.length - 1]);
+  print(name.replaceAll("e", "Z")); // Interesting
+
+  // Uninitialized string (any variable)
+  String? token; // Note the Question mark
+  print("Null string now assigned a value");
+  assert(token == null);
+  token = "DNNr5345345345RBR";
 
   // Integer operations
   print("Integar methods");
@@ -47,8 +55,34 @@ void main() {
   print(num.abs());
   print(num.floor());
 
+  // Float operations
+  print("Float operations");
+  print(pi * 10);
+  print(pi + 10);
+  print(pi * 2.5);
+  print(pi.abs());
+  print(pi.ceil());
+  print(pi.floor());
+
   // Bool operations
   print("Bool operations");
   print(isStored.toString());
   print(!isStored); // Note this way of toggle
+
+  // Multiple words as a string.
+  print("********* Long string opers *******");
+  print(sentence.length);
+  print(sentence.split(" "));
+
+  // List operations
+  var nums = [1, 2, 3, 4];
+  var empty_list = [];
+  print(
+      "Number of items in list: $nums.length"); // See this one. Not what we expected.
+  print(
+      "Number of items in list: ${nums.length}"); // This is perhaps the workable way.
+  print(empty_list.isEmpty);
+  print(nums.length);
+  print(nums.reversed);
+  print(nums.first);
 }
