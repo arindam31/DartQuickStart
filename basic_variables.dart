@@ -79,4 +79,9 @@ void main() {
 
   // Try changing a 'final' type of variable.
   // secret = "NewValue";
+
+  // nulls and null aware operator
+  int? age;
+  // Note the double question mark. It saves null check using if statement.
+  print("Age is: ${age ?? 100}");
 }
