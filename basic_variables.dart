@@ -15,11 +15,13 @@ void main() {
   var num = 100;
   var pi = 0.5;
   var sentence = "This is new";
-  var mix_list = [1, "abc", 3.45, true];
+
   var a_null = null;
 
   // Trying printing them all. This is one way to do it.
-  print("$name, $pi, $sentence, $num, $mix_list");
+  // We do String interpolation using Dollar sign
+  // Note: If you want to print a method or property of an object, then use curly braces like ${object.method}
+  print("$name, $pi, $sentence, $num");
 
   // String operations ...a few common ones
   print("Strings:: methods and operations");
@@ -74,18 +76,6 @@ void main() {
   print("********* Long string opers *******");
   print(sentence.length);
   print(sentence.split(" "));
-
-  // List operations
-  var nums = [1, 2, 3, 4];
-  var empty_list = [];
-  print(
-      "Number of items in list: $nums.length"); // See this one. Not what we expected.
-  print(
-      "Number of items in list: ${nums.length}"); // This is perhaps the workable way.
-  print(empty_list.isEmpty);
-  print(nums.length);
-  print(nums.reversed);
-  print(nums.first);
 
   // Try changing a 'final' type of variable.
   // secret = "NewValue";
